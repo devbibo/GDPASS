@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>GDPASS </title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style type="text/css">
+  body {
+   font-family: 'Open Sans', sans-serif;
+   background: linear-gradient(to right, #FFB347, #FFA07A);
+   color: #fff;
+   margin: 0;
+   padding: 0;
+  }
+  h1 {
+   font-size: 50px;
+   text-align: center;
+   margin-top: 50px;
+   color: #fff;
+   font-family: 'Montserrat', sans-serif;
+  }
+  p {
+   font-size: 24px;
+   text-align: center;
+   margin-top: 20px;
+   font-family: 'Montserrat', sans-serif;
+  }
+  button {
+   display: block;
+   margin: auto;
+   margin-top: 20px;
+   padding: 20px 20px;
+   border-radius: 50px;
+   border: none;
+   background-color: #fff;
+   color: #FFB347;
+   font-size: 18px; 
+   cursor:pointer; 
+   transition-duration:.3s; 
+   box-shadow: none; 
+   outline:none; 
+   font-weight:bold; 
+   text-transform:none; 
+   text-shadow:none; 
+   letter-spacing:normal;
+   font-family: 'Montserrat', sans-serif;
+  }
+  button:hover {
+   background-color: rgba(255, 255, 255, 0.2);
+   color: #fff;
+   border: 2px solid #fff;
+  }
+  button:focus {
+   outline:none;
+  }
+  .arabic {
+   font-family: 'Janna LT Bold', sans-serif;
+  }
+  .container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+  }
+  .button-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+  }
+  .button-container button {
+   margin: 0 10px;
+  }
+  footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 50px;
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   font-size: 14px;
+   font-family: 'Montserrat', sans-serif;
+  }
+  footer p {
+   margin-top: 15px;
+  }
+  @media only screen and (max-width: 600px) {
+   h1 {
+    font-size: 30px;
+   }
+   p {
+    font-size: 16px;
+   }
+   button {
+    padding: 10px 10px;
+    font-size: 14px;
+   }
+  }
+ </style>
+ <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+    <h1>GDPASS 1.4</h1>
+    <div class="button-container row">
+     <button class="col-md-3" onclick="generateIdea()">فكرة عشوائية</button>
+     <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSe3Q8NvTU78yo2y7Yt8iYTeeAn2ZtQBsHJrpNbEAhZiWuoQuQ/viewform?usp=sharing'">تقديم ملاحظات لتحسين الموقع</button>
+	 <button onclick="window.location.href=''">اللغة الانجليزية</button>
+    </div>
+    <p id="idea"></p>
+   </div>
+   <footer style="background-color: #333; color: #ff8c00; padding: 20px; position: fixed; left: 0; bottom: 0; width: 100%;">
+  <div style="display: flex; justify-content: center;">
+    <p style="font-size: 24px;">حقوق الملكية © 2023 GDPASS 1.4 BETA</p>
+  </div>
+</footer>
+ <script type="text/javascript">
+     function generateIdea() {
+      var subjects = ["ارسم شخصية انمي", "جرب اسلوب جديد", "ارسم شخصية كرتون", "جرب الالوان المائية", "حاول اختراع شخصية"];
+      var mediums = ["oil paint", "watercolor", "acrylic paint", "charcoal", "pastel"];
+      var techniques = ["impressionism", "pointillism", "expressionism", "realism", "pop art"];
+
+      var subjectIndex = Math.floor(Math.random() * subjects.length);
+      var mediumIndex = Math.floor(Math.random() * mediums.length);
+      var techniqueIndex = Math.floor(Math.random() * techniques.length);
+
+      var idea = subjects[subjectIndex] + ", using " + mediums[mediumIndex] + ", with a touch of " + techniques[techniqueIndex] + ".";
+      
+      document.getElementById("idea").innerHTML = idea;
+
+     }
+    </script>
+
+</body>
+</html>
